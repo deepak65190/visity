@@ -1,0 +1,20 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+.homeContainer{
+width: 80%;
+height: auto;
+margin: auto;
+text-align: center;
+background-color: aliceblue;
+
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+@media screen and (min-width:0px) and (max-width:600px) {
+  .homeContainer{
+    width: 100%;
+  }
+}
