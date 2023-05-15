@@ -2,7 +2,7 @@ const express = require("express");
 const { visityModal } = require("../models/visity.modal");
 const visityRoute = express.Router();
 //get post Route
-visityRoute.get("/", async (req, res) => {
+visityRoute.get("/list", async (req, res) => {
   try {
     const sendData = await visityModal.find();
     res.send(sendData);
@@ -17,7 +17,7 @@ visityRoute.post("/form", async (req, res) => {
     const data = req.body;
     const getData = new visityModal(data);
     await getData.save();
-    res.send("form  created successfully");
+    res.send("form submitted successfully");
   } catch (err) {
     console.log(err.message);
     res.send(err.message);
